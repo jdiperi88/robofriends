@@ -1,6 +1,6 @@
 # robofriends
-Tutorial for udemy course - React
-To run the project:
+
+Redux and Webpack Practice
 
 1. Clone this repo
 2. Run `npm install`
