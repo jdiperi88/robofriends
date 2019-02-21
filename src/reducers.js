@@ -1,28 +1,28 @@
 import {
-	CHANGE_SEARCH_FIELD,
-	REQUEST_ROBOTS_FAILED,
-	REQUEST_ROBOTS_PENDING,
-	REQUEST_ROBOTS_SUCCESS
+  CHANGE_SEARCH_FIELD,
+  REQUEST_ROBOTS_FAILED,
+  REQUEST_ROBOTS_PENDING,
+  REQUEST_ROBOTS_SUCCESS
 } from "./constants";
-import { bindActionCreators } from "../../../Library/Caches/typescript/3.2/node_modules/redux";
+
 const initialState = {
-	searchField: "",
-	robots: [],
-	isPending: false,
-	err: ""
+  searchField: "",
+  robots: [],
+  isPending: false,
+  err: ""
 };
 
 export const searchRobots = (state = initialState, action = {}) => {
-	switch (action.type) {
-		case CHANGE_SEARCH_FIELD:
-			return { ...state, searchField: action.payload };
-		case REQUEST_ROBOTS_PENDING:
-			return { ...state, isPending: true };
-		case REQUEST_ROBOTS_FAILED:
-			return { ...state, err: action.payload, isPending: false };
-		case REQUEST_ROBOTS_SUCCESS:
-			return { ...state, robots: action.payload, isPending: false };
-		default:
-			return state;
-	}
+  switch (action.type) {
+    case CHANGE_SEARCH_FIELD:
+      return { ...state, searchField: action.payload };
+    case REQUEST_ROBOTS_PENDING:
+      return { ...state, isPending: true };
+    case REQUEST_ROBOTS_FAILED:
+      return { ...state, err: action.payload, isPending: false };
+    case REQUEST_ROBOTS_SUCCESS:
+      return { ...state, robots: action.payload, isPending: false };
+    default:
+      return state;
+  }
 };
