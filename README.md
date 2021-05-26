@@ -1,7 +1,10 @@
 # robofriends
 
-Redux and Webpack Practice
+LESSON 01
 
-1. Clone this repo
-2. Run `npm install`
-3. Run `npm start`
+STEPS
+
+- Create a Jenkinsfile
+- Add a test stage to the Jenkinsfile
+- Run it successfully in Jenkins
+- submit the jenkins url upon PR back to the main repo
